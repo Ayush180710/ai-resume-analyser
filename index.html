@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container" id="mainContainer">
+        <h1>AI Resume Analyzer</h1>
+        
+        <div class="input-section">
+            <label>Upload Resume (PDF)</label>
+            <input type="file" id="resumeFile" accept=".pdf">
+            
+            <label>Paste Job Description Skills</label>
+            <textarea id="job" placeholder="Example: HTML CSS JavaScript React Node MongoDB"></textarea>
+            
+            <button onclick="analyze()" id="analyzeBtn">Run Analysis</button>
+        </div>
+        
+        <div id="resultsSection" style="display: none;">
+            <div class="progress">
+                <div id="bar"></div>
+            </div>
+            
+            <h2 id="score"></h2>
+            <h3 id="ats"></h3>
+            <p id="missing"></p>
+            
+            <h3>Career Insights</h3>
+            <div id="ai" class="ai-results"></div>
+
+            <button onclick="printReport()" id="printBtn" class="secondary-btn">🖨️ Save Report</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

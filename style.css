@@ -1,0 +1,175 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 40px 0;
+}
+
+.container {
+    width: 700px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #555;
+}
+
+input[type="file"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px dashed #aaa;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #3c9440;
+}
+
+button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+}
+
+.secondary-btn {
+    background: #1976d2;
+    margin-top: 25px;
+    width: auto;
+}
+
+.secondary-btn:hover {
+    background: #115293;
+}
+
+.progress {
+    width: 100%;
+    height: 22px;
+    background: #eee;
+    border-radius: 20px;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+#bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4CAF50, #00c853);
+    border-radius: 20px;
+    transition: width 1s ease-in-out;
+}
+
+#score {
+    margin-top: 20px;
+    font-size: 26px;
+    color: #222;
+}
+
+#ats {
+    color: #1976d2;
+    margin-top: 10px;
+}
+
+#missing {
+    color: #d32f2f;
+    font-weight: 500;
+    background: #ffebee;
+    padding: 10px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.ai-results {
+    margin-top: 20px;
+    text-align: left;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ai-results h1, .ai-results h2, .ai-results h3 {
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 5px;
+}
+
+.ai-results ul, .ai-results ol {
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+/* Print Media Query */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .container {
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .input-section, #printBtn {
+        display: none !important;
+    }
+
+    .ai-results {
+        border: none;
+        background: white;
+        padding: 0;
+    }
+}
